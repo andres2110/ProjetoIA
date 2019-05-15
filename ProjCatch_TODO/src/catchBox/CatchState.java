@@ -104,11 +104,33 @@ public class CatchState extends State implements Cloneable {
         return matrix;
     }
 
+    public int getLineGoal() {
+        return lineGoal;
+    }
+
+    public int getColumnGoal() {
+        return columnGoal;
+    }
+
+    public int getCatchLine() {
+        return catchLine;
+    }
+
+    public int getCatchColumn() {
+        return catchColumn;
+    }
     public void setGoal(int line, int column) {
         //TODO
        lineGoal=line;
        columnGoal=column;
-
+       switch (goal_matrix[line][column]){
+           case 1:
+               break;
+           case 2:
+               break;
+           case 4:
+               break;
+       }
     }
 
     public int getSteps() {
