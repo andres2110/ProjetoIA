@@ -86,13 +86,21 @@ public class CatchState extends State implements Cloneable {
         matrix[catchLine][catchColumn] = 0;
     }
 
+    public double computeManhattan(){
+
+        double h= Math.abs(catchLine-lineGoal)+Math.abs(columnGoal-catchColumn);
+
+
+        return h;
+    }
+
     public int getNumBox() {
-        //TODO
+
         return numBoxes;
     }
 
     public void setCellCatch(int line, int column) {
-        //TODO
+
         catchColumn=column;
         catchLine=line;
     }
