@@ -70,23 +70,23 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+    matrix[catchLine+1][catchColumn] = matrix[catchLine][catchColumn];
+    matrix[catchLine][catchColumn] = 0;
     }
 
     public void moveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        matrix[catchLine][catchColumn+1] = matrix[catchLine][catchColumn];
+        matrix[catchLine][catchColumn] = 0;
     }
 
     public void moveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        matrix[catchLine-1][catchColumn] = matrix[catchLine][catchColumn];
+        matrix[catchLine][catchColumn] = 0;
     }
 
     public void moveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        matrix[catchLine][catchColumn-1] = matrix[catchLine][catchColumn];
+        matrix[catchLine][catchColumn] = 0;
     }
 
     public int getNumBox() {
