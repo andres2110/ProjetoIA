@@ -278,7 +278,6 @@ public class MainFrame extends JFrame implements GAListener {
                             Solution s = agentSearch.solveProblem(problem);
                             p.setValue((int) s.getCost());
 
-
                         }
                         problemGA = new CatchProblemForGA(agentSearch.getInitialBox(), pairs, agentSearch.getCellCatch(), agentSearch.getDoor());
 

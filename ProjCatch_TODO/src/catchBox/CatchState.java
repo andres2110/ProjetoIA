@@ -14,6 +14,10 @@ public class CatchState extends State implements Cloneable {
     private   int lineaAgente;
     private  int colunaAgente;
     private int [][] goal_matrix;
+    private int lineGoal;
+    private int columnGoal;
+    private int catchLine;
+    private int catchColumn;
     private int  numBoxes;
     public CatchState(int[][] matrix) {
         goal_matrix=matrix;
@@ -92,7 +96,8 @@ public class CatchState extends State implements Cloneable {
 
     public void setCellCatch(int line, int column) {
         //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        catchColumn=column;
+        catchLine=line;
     }
 
     public int[][] getMatrix() {
@@ -101,23 +106,15 @@ public class CatchState extends State implements Cloneable {
 
     public void setGoal(int line, int column) {
         //TODO
-        switch (goal_matrix[line][column]){
-            case 1:
-                goal_matrix[line][column]=0;
-                break;
-            case 2:
-               goal_matrix[line][column]=0;
-                break;
-            case 4:
-               goal_matrix[line][column]=1;
-                break;
-        }
+       lineGoal=line;
+       columnGoal=column;
+
     }
 
     public int getSteps() {
         //TODO
         //throw new UnsupportedOperationException("Not Implemented Yet");
-        return 1;
+        return 1; //implementar
     }
 
     public int getSize() {
