@@ -50,23 +50,23 @@ public class CatchState extends State implements Cloneable {
     }
 
     public boolean canMoveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return catchLine != 0 && matrix[catchLine+1][catchColumn] != 3 ;
+
     }
 
     public boolean canMoveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return catchColumn != 5 && matrix[catchLine][catchColumn+1] != 3 ;
+
     }
 
     public boolean canMoveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return catchLine != 5 && matrix[catchLine-1][catchColumn] != 3 ;
+
     }
 
     public boolean canMoveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return catchColumn != 0 && matrix[catchLine][catchColumn-1] != 3 ;
+
     }
 
     public void moveUp() {
