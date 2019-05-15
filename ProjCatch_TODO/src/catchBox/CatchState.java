@@ -19,7 +19,6 @@ public class CatchState extends State implements Cloneable {
     private int catchLine;
     private int catchColumn;
     private int  numBoxes;
-    private  int steps;
     public CatchState(int[][] matrix) {
         goal_matrix=matrix;
         this.matrix=matrix;
@@ -44,9 +43,7 @@ public class CatchState extends State implements Cloneable {
 
     public void executeAction(Action action) {
         action.execute(this);
-        steps++;
         fireUpdatedEnvironment();
-
     }
 
     public boolean canMoveUp() {
@@ -89,6 +86,14 @@ public class CatchState extends State implements Cloneable {
         matrix[catchLine][catchColumn] = 0;
     }
 
+    public double computeManhattan(){
+
+        double h= Math.abs(catchLine-lineGoal)+Math.abs(columnGoal-catchColumn);
+
+
+        return h;
+    }
+
     public int getNumBox() {
 
         return numBoxes;
@@ -120,13 +125,23 @@ public class CatchState extends State implements Cloneable {
         return catchColumn;
     }
     public void setGoal(int line, int column) {
-
+        //TODO
        lineGoal=line;
        columnGoal=column;
+       switch (goal_matrix[line][column]){
+           case 1:
+               break;
+           case 2:
+               break;
+           case 4:
+               break;
+       }
     }
 
     public int getSteps() {
-        return steps;
+        //TODO
+        //throw new UnsupportedOperationException("Not Implemented Yet");
+        return 1; //implementar
     }
 
     public int getSize() {
