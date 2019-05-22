@@ -25,12 +25,24 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
 
     @Override
     public CatchIndividual getNewIndividual() {
-       return  new CatchIndividual(this,pairs.size());
+       return  new CatchIndividual(this,cellsBoxes.size());
     }
 
     @Override
     public String toString() {
         //TODO
         throw new UnsupportedOperationException("Not Implemented Yet");
+    }
+
+    public LinkedList<Pair> getPairs() {
+        return pairs;
+    }
+
+    public LinkedList<Cell> getCellsBoxes() {
+        return cellsBoxes;
+    }
+
+    public Cell getCellCath() {
+        return cellCath;
     }
 }

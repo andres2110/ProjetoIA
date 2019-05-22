@@ -8,9 +8,8 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
     public IntVectorIndividual(P problem, int size) {
         super(problem);
         genome = new int[size];
+        createGenoma();
 
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
       }
 
     public IntVectorIndividual(IntVectorIndividual<P, I> original) {
@@ -18,7 +17,25 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
         this.genome = new int[original.genome.length];
         System.arraycopy(original.genome, 0, genome, 0, genome.length);
     }
-
+    private void createGenoma(){
+        int numPreenchidos=0;
+        while (numPreenchidos!=genome.length){
+            genome[numPreenchidos]=GeneticAlgorithm.random.nextInt(genome.length+1);
+            if(genome[numPreenchidos]==0||notExistGen(genome[numPreenchidos])){
+                continue;
+            }else {
+                numPreenchidos++;
+            }
+        }
+    }
+    private boolean notExistGen(int gen){
+        for (int i = 0; i < genome.length; i++) {
+            if(genome[i]==gen){
+                return false;
+            }
+        }
+        return true;
+    }
     @Override
     public int getNumGenes() {
         return genome.length;

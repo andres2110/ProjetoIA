@@ -4,6 +4,7 @@ import ga.IntVectorIndividual;
 
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
 
+    private double value;
     public CatchIndividual(CatchProblemForGA problem, int size) {
         super(problem, size);
     }
@@ -14,8 +15,10 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
 
     @Override
     public double computeFitness() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        for (int i = 0; i < genome.length; i++) {
+            Cell cellBox = problem.getCellsBoxes().get(this.getIndexof(i + 1));
+            value=problem.getPairs()
+        }
     }
 
     public int[] getGenome() {
