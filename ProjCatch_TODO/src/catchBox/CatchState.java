@@ -13,17 +13,17 @@ public class CatchState extends State implements Cloneable {
     protected int[][] matrix;
     private   int lineaAgente;
     private  int colunaAgente;
-    private int [][] goal_matrix;
+
     private int lineGoal;
     private int columnGoal;
     private int catchLine;
     private int catchColumn;
     private int  numBoxes;
-    private int step;
+    private int steps;
     public CatchState(int[][] matrix) {
-        goal_matrix=matrix;
         this.matrix=new int[matrix.length][matrix.length];
         numBoxes=0;
+        steps = 0;
         for (int i = 0; i <matrix.length ; i++) {
             for (int j = 0; j <matrix.length ; j++) {
                 this.matrix[i][j] = matrix[i][j];
@@ -72,24 +72,28 @@ public class CatchState extends State implements Cloneable {
     matrix[catchLine-1][catchColumn] = matrix[catchLine][catchColumn];
     matrix[catchLine][catchColumn] = 0;
     catchLine--;
+    steps++;
     }
 
     public void moveRight() {
         matrix[catchLine][catchColumn+1] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
         catchColumn++;
+        steps++;
     }
 
     public void moveDown() {
         matrix[catchLine+1][catchColumn] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
         catchLine++;
+        steps++;
     }
 
     public void moveLeft() {
         matrix[catchLine][catchColumn-1] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
         catchColumn--;
+        steps++;
     }
 
     public double computeManhattan(){
@@ -140,7 +144,7 @@ public class CatchState extends State implements Cloneable {
     public int getSteps() {
 
         //throw new UnsupportedOperationException("Not Implemented Yet");
-        return 1; //implementar
+        return steps; //implementar
     }
 
     public int getSize() {
