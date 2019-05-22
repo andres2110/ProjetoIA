@@ -16,17 +16,16 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
             LinkedList<Pair> pairs,
             Cell cellCatch,
             Cell door) {
-        this.cellsBoxes= new LinkedList<>();
         this.cellsBoxes=(LinkedList<Cell>) cellsBoxes.clone();
         this.pairs=(LinkedList<Pair>) pairs.clone();
-
+        this.cellCath=new Cell(cellCatch.getLine(),cellCatch.getColumn());
+        this.door= new Cell(door.getLine(),door.getColumn());
 
     }
 
     @Override
     public CatchIndividual getNewIndividual() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+       return  new CatchIndividual(this,pairs.size());
     }
 
     @Override
