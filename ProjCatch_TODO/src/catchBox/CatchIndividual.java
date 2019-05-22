@@ -17,8 +17,13 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
     public double computeFitness() {
         for (int i = 0; i < genome.length; i++) {
             Cell cellBox = problem.getCellsBoxes().get(this.getIndexof(i + 1));
-            value=problem.getPairs()
+            for (Pair pair : problem.getPairs()) {
+                if(pair.getCell1()==problem.getCellCath()&&pair.getCell2()==cellBox){
+                    value+=pair.getValue();
+                }
+            }
         }
+        return value;
     }
 
     public int[] getGenome() {

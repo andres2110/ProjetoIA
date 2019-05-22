@@ -20,10 +20,11 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
     private void createGenoma(){
         int numPreenchidos=0;
         while (numPreenchidos!=genome.length){
-            genome[numPreenchidos]=GeneticAlgorithm.random.nextInt(genome.length+1);
-            if(genome[numPreenchidos]==0||notExistGen(genome[numPreenchidos])){
+            int pos=GeneticAlgorithm.random.nextInt(genome.length+1);
+            if(pos==0||notExistGen(pos)){
                 continue;
             }else {
+                genome[numPreenchidos]=pos;
                 numPreenchidos++;
             }
         }
@@ -31,10 +32,10 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
     private boolean notExistGen(int gen){
         for (int i = 0; i < genome.length; i++) {
             if(genome[i]==gen){
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
     @Override
     public int getNumGenes() {
