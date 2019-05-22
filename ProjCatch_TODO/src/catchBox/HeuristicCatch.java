@@ -11,7 +11,6 @@ public class HeuristicCatch extends Heuristic<CatchProblemSearch, CatchState> {
 
     @Override
     public String toString() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return "Mangattnah Heuristic";
     }
 }

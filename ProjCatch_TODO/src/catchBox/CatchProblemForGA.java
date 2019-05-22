@@ -6,14 +6,21 @@ import java.util.LinkedList;
 
 public class CatchProblemForGA implements Problem<CatchIndividual> {
     //TODO this class might require the definition of additional methods and/or attributes
+    private LinkedList<Cell> cellsBoxes;
+    private LinkedList<Pair> pairs;
+    private Cell cellCath;
+    private Cell door;
 
     public CatchProblemForGA(
             LinkedList<Cell> cellsBoxes,
             LinkedList<Pair> pairs,
             Cell cellCatch,
             Cell door) {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        this.cellsBoxes= new LinkedList<>();
+        this.cellsBoxes=(LinkedList<Cell>) cellsBoxes.clone();
+        this.pairs=(LinkedList<Pair>) pairs.clone();
+
+
     }
 
     @Override

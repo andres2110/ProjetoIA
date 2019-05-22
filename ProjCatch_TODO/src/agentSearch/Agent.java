@@ -1,5 +1,6 @@
 package agentSearch;
 
+import catchBox.HeuristicCatch;
 import search.AStarSearch;
 import search.SearchMethod;
 
@@ -23,6 +24,8 @@ public class Agent<E extends State> {
         searchMethods.add(new AStarSearch());
         searchMethod = searchMethods.get(0);
         heuristics = new ArrayList<>();
+        heuristic=new HeuristicCatch();
+        heuristics.add(heuristic);
     }
 
     public Solution solveProblem(Problem problem) {

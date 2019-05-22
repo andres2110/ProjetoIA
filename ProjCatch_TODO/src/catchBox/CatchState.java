@@ -19,12 +19,14 @@ public class CatchState extends State implements Cloneable {
     private int catchLine;
     private int catchColumn;
     private int  numBoxes;
+    private int step;
     public CatchState(int[][] matrix) {
         goal_matrix=matrix;
-        this.matrix=matrix;
+        this.matrix=new int[matrix.length][matrix.length];
         numBoxes=0;
         for (int i = 0; i <matrix.length ; i++) {
             for (int j = 0; j <matrix.length ; j++) {
+                this.matrix[i][j] = matrix[i][j];
                 if(matrix[i][j]==1){
                     lineaAgente=i;
                     colunaAgente=j;
@@ -47,7 +49,7 @@ public class CatchState extends State implements Cloneable {
     }
 
     public boolean canMoveUp() {
-        return catchLine != 0 && matrix[catchLine+1][catchColumn] != 3 ;
+        return catchLine != 0 && matrix[catchLine-1][catchColumn] != 3 ;
 
     }
 
@@ -57,7 +59,7 @@ public class CatchState extends State implements Cloneable {
     }
 
     public boolean canMoveDown() {
-        return catchLine != 5 && matrix[catchLine-1][catchColumn] != 3 ;
+        return catchLine != 5 && matrix[catchLine+1][catchColumn] != 3 ;
 
     }
 
@@ -67,23 +69,27 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveUp() {
-    matrix[catchLine+1][catchColumn] = matrix[catchLine][catchColumn];
+    matrix[catchLine-1][catchColumn] = matrix[catchLine][catchColumn];
     matrix[catchLine][catchColumn] = 0;
+    catchLine--;
     }
 
     public void moveRight() {
         matrix[catchLine][catchColumn+1] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
+        catchColumn++;
     }
 
     public void moveDown() {
-        matrix[catchLine-1][catchColumn] = matrix[catchLine][catchColumn];
+        matrix[catchLine+1][catchColumn] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
+        catchLine++;
     }
 
     public void moveLeft() {
         matrix[catchLine][catchColumn-1] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
+        catchColumn--;
     }
 
     public double computeManhattan(){
@@ -125,21 +131,14 @@ public class CatchState extends State implements Cloneable {
         return catchColumn;
     }
     public void setGoal(int line, int column) {
-        //TODO
+
        lineGoal=line;
        columnGoal=column;
-       switch (goal_matrix[line][column]){
-           case 1:
-               break;
-           case 2:
-               break;
-           case 4:
-               break;
-       }
+
     }
 
     public int getSteps() {
-        //TODO
+
         //throw new UnsupportedOperationException("Not Implemented Yet");
         return 1; //implementar
     }
@@ -198,8 +197,10 @@ public class CatchState extends State implements Cloneable {
 
     @Override
     public CatchState clone() {
-        //TODO
-        return new CatchState(matrix);
+        CatchState clone=new CatchState(matrix);
+        clone.setCellCatch(catchLine,catchColumn);
+        clone.setGoal(lineGoal,columnGoal);
+        return clone;
     }
 
     //Listeners
