@@ -25,7 +25,7 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
         List<S> successors=new ArrayList<>(4);
         for (Action action:actions) {
             if(action.isValid(state)){
-                S successor=(S) state.clone();
+                S successor= (S) state.clone();
                 action.execute(successor);
                 successors.add(successor);
             }
