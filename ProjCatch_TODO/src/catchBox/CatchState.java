@@ -11,6 +11,7 @@ public class CatchState extends State implements Cloneable {
     //TODO this class might require the definition of additional methods and/or attributes
 
     protected int[][] matrix;
+    private  int lengthMatrix;
     private   int lineaAgente;
     private  int colunaAgente;
 
@@ -21,6 +22,7 @@ public class CatchState extends State implements Cloneable {
     private int  numBoxes;
     private int steps;
     public CatchState(int[][] matrix) {
+        lengthMatrix=matrix.length;
         this.matrix=new int[matrix.length][matrix.length];
         numBoxes=0;
         steps = 0;
@@ -54,12 +56,12 @@ public class CatchState extends State implements Cloneable {
     }
 
     public boolean canMoveRight() {
-        return catchColumn != 5 && matrix[catchLine][catchColumn+1] != 3 ;
+        return catchColumn != lengthMatrix-1 && matrix[catchLine][catchColumn+1] != 3 ;
 
     }
 
     public boolean canMoveDown() {
-        return catchLine != 5 && matrix[catchLine+1][catchColumn] != 3 ;
+        return catchLine != lengthMatrix-1 && matrix[catchLine+1][catchColumn] != 3 ;
 
     }
 

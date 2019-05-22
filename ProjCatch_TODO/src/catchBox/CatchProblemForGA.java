@@ -45,4 +45,8 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
     public Cell getCellCath() {
         return cellCath;
     }
+
+    public Cell getDoor() {
+        return door;
+    }
 }
