@@ -4,7 +4,6 @@ import ga.IntVectorIndividual;
 
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
 
-    private double value;
     public CatchIndividual(CatchProblemForGA problem, int size) {
         super(problem, size);
     }
@@ -15,15 +14,25 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
 
     @Override
     public double computeFitness() {
+        Cell cellBox=null;
         for (int i = 0; i < genome.length; i++) {
-            Cell cellBox = problem.getCellsBoxes().get(this.getIndexof(i + 1));
+           cellBox = problem.getCellsBoxes().get(this.getIndexof(i + 1));
             for (Pair pair : problem.getPairs()) {
-                if(pair.getCell1()==problem.getCellCath()&&pair.getCell2()==cellBox){
-                    value+=pair.getValue();
+                if(pair.getCell1().getLine()==problem.getCellCath().getLine()&&pair.getCell1().getColumn()==problem.getCellCath().getColumn()&&
+                        pair.getCell2().getLine()==cellBox.getLine()&&pair.getCell2().getColumn()==cellBox.getColumn()){
+                    fitness+=pair.getValue();
                 }
+
             }
         }
-        return value;
+        for (Pair pair: problem.getPairs()) {
+            if(pair.getCell1().getLine()==cellBox.getLine()&&pair.getCell1().getColumn()==cellBox.getColumn()
+                    &&pair.getCell2().getLine()==problem.getDoor().getLine()&&pair.getCell2().getColumn()==problem.getDoor().getColumn()){
+                fitness+=pair.getValue();
+            }
+        }
+
+        return fitness;
     }
 
     public int[] getGenome() {
@@ -39,6 +48,13 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
         for (int i = 0; i <genome.length ; i++) {
             sb.append(genome[i]).append(" ");
         }
+        sb.append("Porta");
+        sb.append("\nposicao: ");
+        for (int i = 0; i <genome.length ; i++) {
+            sb.append(problem.getCellsBoxes().get(genome[i]-1)).append(" ");
+
+        }
+        sb.append(problem.getDoor());
         return sb.toString();
     }
 
