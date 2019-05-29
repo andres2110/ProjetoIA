@@ -12,8 +12,8 @@ public class CatchState extends State implements Cloneable {
 
     protected int[][] matrix;
     private  int lengthMatrix;
-    private   int lineaAgente;
-    private  int colunaAgente;
+//    private   int lineaAgente;
+//    private  int colunaAgente;
 
     private int lineGoal;
     private int columnGoal;
@@ -30,8 +30,8 @@ public class CatchState extends State implements Cloneable {
             for (int j = 0; j <matrix.length ; j++) {
                 this.matrix[i][j] = matrix[i][j];
                 if(matrix[i][j]==1){
-                    lineaAgente=i;
-                    colunaAgente=j;
+                    catchLine=i;
+                    catchColumn=j;
                 }else{
                     if(matrix[i][j]==2){
                         numBoxes++;

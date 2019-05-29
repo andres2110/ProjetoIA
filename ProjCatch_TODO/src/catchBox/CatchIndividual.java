@@ -15,6 +15,7 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
     @Override
     public double computeFitness() {
         Cell cellBox=null;
+        this.fitness = 0;
         for (int i = 0; i < genome.length; i++) {
            cellBox = problem.getCellsBoxes().get(this.getIndexof(i + 1));
             for (Pair pair : problem.getPairs()) {
@@ -31,7 +32,6 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
                 fitness+=pair.getValue();
             }
         }
-
         return fitness;
     }
 
