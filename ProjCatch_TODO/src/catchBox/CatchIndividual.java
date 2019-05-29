@@ -17,18 +17,26 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
         Cell cellBox=null;
         this.fitness = 0;
         for (int i = 0; i < genome.length; i++) {
-           cellBox = problem.getCellsBoxes().get(this.getIndexof(i + 1));
+           cellBox = problem.getCellsBoxes().get(genome[i]-1);
             for (Pair pair : problem.getPairs()) {
-                if(pair.getCell1().getLine()==problem.getCellCath().getLine()&&pair.getCell1().getColumn()==problem.getCellCath().getColumn()&&
+              /*  if(pair.getCell1().getLine()==problem.getCellCath().getLine()&&pair.getCell1().getColumn()==problem.getCellCath().getColumn()&&
                         pair.getCell2().getLine()==cellBox.getLine()&&pair.getCell2().getColumn()==cellBox.getColumn()){
                     fitness+=pair.getValue();
                 }
+                */
+              if(pair.getCell1().equals(problem.getCellCath())&&pair.getCell2().equals(cellBox)){
+                  fitness+=pair.getValue();
+              }
 
             }
         }
         for (Pair pair: problem.getPairs()) {
-            if(pair.getCell1().getLine()==cellBox.getLine()&&pair.getCell1().getColumn()==cellBox.getColumn()
+            /*if(pair.getCell1().getLine()==cellBox.getLine()&&pair.getCell1().getColumn()==cellBox.getColumn()
                     &&pair.getCell2().getLine()==problem.getDoor().getLine()&&pair.getCell2().getColumn()==problem.getDoor().getColumn()){
+                fitness+=pair.getValue();
+            }
+            */
+            if(pair.getCell1().equals(cellBox)&&pair.getCell2().equals(problem.getDoor())){
                 fitness+=pair.getValue();
             }
         }
