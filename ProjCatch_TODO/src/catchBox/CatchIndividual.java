@@ -2,6 +2,8 @@ package catchBox;
 
 import ga.IntVectorIndividual;
 
+import java.util.LinkedList;
+
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
 
     public CatchIndividual(CatchProblemForGA problem, int size) {
@@ -17,7 +19,9 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
         Cell cellBox=null;
         this.fitness = 0;
         for (int i = 0; i < genome.length; i++) {
-           cellBox = problem.getCellsBoxes().get(genome[i]-1);
+            LinkedList<Cell> boxes=problem.getCellsBoxes();
+            cellBox = problem.getCellsBoxes().get(getIndexof(i+1));
+            //cellBox = problem.getCellsBoxes().get(genome[i]-1);
             for (Pair pair : problem.getPairs()) {
               /*  if(pair.getCell1().getLine()==problem.getCellCath().getLine()&&pair.getCell1().getColumn()==problem.getCellCath().getColumn()&&
                         pair.getCell2().getLine()==cellBox.getLine()&&pair.getCell2().getColumn()==cellBox.getColumn()){
