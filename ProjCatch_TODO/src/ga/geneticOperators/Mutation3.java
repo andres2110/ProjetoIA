@@ -23,13 +23,16 @@ public class Mutation3<I extends IntVectorIndividual, P extends Problem<I>> exte
             cut1 = cut2;
             cut2 = aux;
         }
-        for(int i = cut1; i <= cut2/2 ; i++) {
-            int aux = ind.getGene(i);
-            ind.setGene(i , ind.getGene(cut2-cut1));
-            ind.setGene(cut2, aux);
-        }  }
+        int aux1 = ind.getGene(cut2);
+        for(int i = cut2-1; i > cut1 ; i--) {
+            int aux2 = ind.getGene(i+1);
+            ind.setGene(i+1 , ind.getGene(i));
+            ind.setGene(i, aux2);
+        }
+        ind.setGene(cut1+1,aux1) ;
+    }
 
     @Override
     public String toString() {
-        return "Inversion Mutation"; }
+        return "Inversion Mutation (SIM)"; }
 }
