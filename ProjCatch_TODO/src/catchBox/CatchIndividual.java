@@ -18,29 +18,21 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
     public double computeFitness() {
         Cell cellBox=null;
         this.fitness = 0;
+        Cell cellCurrent=problem.getCellCath();
         for (int i = 0; i < genome.length; i++) {
             LinkedList<Cell> boxes=problem.getCellsBoxes();
-            cellBox = problem.getCellsBoxes().get(getIndexof(i+1));
-            //cellBox = problem.getCellsBoxes().get(genome[i]-1);
+            //cellBox = problem.getCellsBoxes().get(getIndexof(i+1));
+            cellBox = problem.getCellsBoxes().get(genome[i]-1);
             for (Pair pair : problem.getPairs()) {
-              /*  if(pair.getCell1().getLine()==problem.getCellCath().getLine()&&pair.getCell1().getColumn()==problem.getCellCath().getColumn()&&
-                        pair.getCell2().getLine()==cellBox.getLine()&&pair.getCell2().getColumn()==cellBox.getColumn()){
-                    fitness+=pair.getValue();
-                }
-                */
-              if(pair.getCell1().equals(problem.getCellCath())&&pair.getCell2().equals(cellBox)){
+              if((pair.getCell1().equals(cellCurrent)&&pair.getCell2().equals(cellBox))||(pair.getCell1().equals(cellBox)&&pair.getCell2().equals(cellCurrent))){
                   fitness+=pair.getValue();
+                  cellCurrent=cellBox;
+                  break;
               }
-
             }
         }
         for (Pair pair: problem.getPairs()) {
-            /*if(pair.getCell1().getLine()==cellBox.getLine()&&pair.getCell1().getColumn()==cellBox.getColumn()
-                    &&pair.getCell2().getLine()==problem.getDoor().getLine()&&pair.getCell2().getColumn()==problem.getDoor().getColumn()){
-                fitness+=pair.getValue();
-            }
-            */
-            if(pair.getCell1().equals(cellBox)&&pair.getCell2().equals(problem.getDoor())){
+            if(pair.getCell1().equals(cellBox)&&pair.getCell2().equals(problem.getDoor())||(pair.getCell1().equals(problem.getDoor())&&pair.getCell2().equals(cellBox))){
                 fitness+=pair.getValue();
             }
         }

@@ -101,8 +101,6 @@ public class CatchState extends State implements Cloneable {
     public double computeManhattan(){
 
         double h= Math.abs(catchLine-lineGoal)+Math.abs(columnGoal-catchColumn);
-
-
         return h;
     }
 

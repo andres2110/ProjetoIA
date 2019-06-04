@@ -21,7 +21,7 @@ public class Recombination2<I extends IntVectorIndividual, P extends Problem<I>>
         child2=new int[ind2.getNumGenes()];
         int cut1= GeneticAlgorithm.random.nextInt(ind1.getNumGenes());
         crear_filhos(cut1,ind1,ind2);
-        for (int i = 0; i < cut1; i++) {
+        for (int i = 0; i < child1.length; i++) {
             ind1.setGene(i, child1[i]);
             ind2.setGene(i, child2[i]);
         }
@@ -70,7 +70,7 @@ public class Recombination2<I extends IntVectorIndividual, P extends Problem<I>>
         */
 
             for (int i = cut+1; i <ind2.getNumGenes() ; i++) {
-                    genCurrent=ind1.getGene(i);
+                    genCurrent=ind2.getGene(i);
                     if(isRepetidos(cut,genCurrent,1)) {
                         auxinx--;
                     }else{
@@ -91,8 +91,9 @@ public class Recombination2<I extends IntVectorIndividual, P extends Problem<I>>
                 }
             }
             auxinx=cut+1;
+
         for (int i = cut+1; i <ind2.getNumGenes() ; i++) {
-            genCurrent=ind2.getGene(i);
+            genCurrent=ind1.getGene(i);
             if(isRepetidos(cut,genCurrent,2)) {
                 auxinx--;
             }else{

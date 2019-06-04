@@ -30,8 +30,7 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
 
     @Override
     public String toString() {
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return "Problem for GA";
     }
 
     public LinkedList<Pair> getPairs() {
