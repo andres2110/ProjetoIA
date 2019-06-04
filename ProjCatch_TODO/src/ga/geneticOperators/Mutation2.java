@@ -14,7 +14,8 @@ public class Mutation2<I extends IntVectorIndividual, P extends Problem<I>> exte
     public void mutate(I ind) {
         for(int i= 0; i< ind.getNumGenes();i++){
 
-            if(GeneticAlgorithm.random.nextDouble() <= probability ) {
+
+            if(GeneticAlgorithm.random.nextDouble() < probability ) {
                 int aux =ind.getGene(i);
                 int cut;
                 do {
