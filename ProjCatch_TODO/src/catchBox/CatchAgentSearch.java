@@ -11,7 +11,7 @@ public class CatchAgentSearch<S extends State> extends Agent<S> {
 
     protected S initialEnvironment;
     private static LinkedList<Pair> pairs;
-    private static LinkedList<Cell> boxes;
+    protected static LinkedList<Cell> boxes;
     private static Cell cellCatch;
     private static Cell door;
 

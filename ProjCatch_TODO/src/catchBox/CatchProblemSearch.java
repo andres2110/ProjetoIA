@@ -35,6 +35,6 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
 
     public boolean isGoal(S state) {
 
-        return state.getCatchColumn()==goalPosition.getColumn()&&state.getCatchLine()==goalPosition.getLine();
+        return state.getCatchLine()==goalPosition.getLine()&&state.getCatchColumn()==goalPosition.getColumn();
     }
 }
