@@ -1,0 +1,4 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:
+500	150	Tournament(4)	PMX	0.7	Insert	0.3		137.53333333333333	11.39220006066529
+500	150	Tournament(4)	crossover	0.7	Insert	0.3		123.13333333333334	5.1815913471528114
+500	150	Tournament(4)	One cute	0.7	Insert	0.3		138.4	12.191800523302536
