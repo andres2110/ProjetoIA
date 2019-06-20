@@ -118,8 +118,7 @@ public class Recombination2<I extends IntVectorIndividual, P extends Problem<I>>
 
     @Override
     public String toString(){
-        //TODO
-        return "One cute";
+        return "One cute" ;
     }
     private boolean isRepetidos(int cut,int gen,int child){
         switch (child){

@@ -76,8 +76,7 @@ public class Recombination3<I extends IntVectorIndividual, P extends Problem<I>>
     }
     @Override
     public String toString(){
-        //TODO
-        throw new UnsupportedOperationException("Not Implemented Yet");
+        return "crossover";
     }
     public boolean exists(int value,int child){
         switch (child){
