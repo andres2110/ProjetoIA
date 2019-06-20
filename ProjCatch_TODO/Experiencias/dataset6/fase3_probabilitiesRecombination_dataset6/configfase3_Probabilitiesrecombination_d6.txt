@@ -1,0 +1,32 @@
+Runs: 30
+
+Population size: 500
+
+Max generations: 150
+
+//--------------------------------
+
+Selection: tournament
+
+Tournament size: 4
+
+//--------------------------------
+
+Recombination: pmx, one cut, crossover
+
+Recombination probability: 0.5, 0.7, 1.0, 1.2
+
+//--------------------------------
+
+Mutation: insert
+
+Mutation probability: 0.3
+
+//--------------------------------
+
+Problem file: ./DataSets/puzzle_6.txt
+
+//--------------------------------
+
+Statistic: BestIndividual
+Statistic: BestAverage
