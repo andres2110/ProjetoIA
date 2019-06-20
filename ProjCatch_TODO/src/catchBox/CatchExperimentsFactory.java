@@ -52,10 +52,10 @@ public class CatchExperimentsFactory extends ExperimentsFactory {
             case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
                 break;
-            case "TODO1": //TODO
+            case "one cut":
                 recombination = new Recombination3<>(recombinationProbability);
                 break;
-            case "TODO2": //TODO
+            case "crossover":
                 recombination = new Recombination2<>(recombinationProbability);
                 break;
         }
@@ -66,10 +66,10 @@ public class CatchExperimentsFactory extends ExperimentsFactory {
             case "insert":
                 mutation = new MutationInsert<>(mutationProbability);
                 break;
-            case "TODO1": //TODO
+            case "inverse":
                 mutation = new Mutation3<>(mutationProbability);
                 break;
-            case "TODO2": //TODO
+            case "swap":
                 mutation = new Mutation2<>(mutationProbability);
                 break;
         }
@@ -166,7 +166,7 @@ public class CatchExperimentsFactory extends ExperimentsFactory {
         return sb.toString();
     }
 
-    public String   getFile() {
+    public String getFile() {
         return file;
     }
 }

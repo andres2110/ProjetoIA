@@ -30,5 +30,5 @@ public class Mutation2<I extends IntVectorIndividual, P extends Problem<I>> exte
 
     @Override
     public String toString() {
-        return " swap mutation (" + probability + ")";}
+        return " swap mutation(" + probability + ")";}
 }

@@ -12,7 +12,7 @@ public class Mutation3<I extends IntVectorIndividual, P extends Problem<I>> exte
 
     @Override
     public void mutate(I ind) {
-        //no esta provado si funciona
+
         int cut1 = GeneticAlgorithm.random.nextInt(ind.getNumGenes());
         int cut2;
         do {

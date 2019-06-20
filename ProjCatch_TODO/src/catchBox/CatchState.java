@@ -114,6 +114,7 @@ public class CatchState extends State implements Cloneable {
         if(matrix[line][column]==2){
             matrix[line][column]=1;
         }
+
         catchColumn=column;
         catchLine=line;
     }
