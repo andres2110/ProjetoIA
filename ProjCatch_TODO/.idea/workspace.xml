@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="Recombination 3 pronta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiencias/dataset6/Fase1_popultionAndNGeracoes_dataset6/statistic_average_fitness.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiencias/dataset8/Fase1_popultionAndNGeracoes_dataset8/statistic_average_fitness.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Experiencias/dataset8/Fase1_popultionAndNGeracoes_dataset8/statistic_average_fitness.xls" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/catchBox/CatchExperimentsFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="49" column="109" lean-forward="true" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
+              <caret line="49" column="109" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -147,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/catchBox/CatchState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="204">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -333,7 +331,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -389,6 +386,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,7 +619,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106320000" />
+    <option name="totallyTimeSpent" value="107751000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -636,7 +634,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676248" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24054463" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -1081,8 +1079,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/catchBox/CatchState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="204">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1129,7 +1127,7 @@
     <entry file="file://$PROJECT_DIR$/src/catchBox/CatchExperimentsFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="49" column="109" lean-forward="true" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
+          <caret line="49" column="109" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
         </state>
       </provider>
     </entry>
