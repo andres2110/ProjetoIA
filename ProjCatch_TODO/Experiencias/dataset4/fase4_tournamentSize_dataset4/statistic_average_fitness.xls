@@ -1,0 +1,5 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:
+500	150	Tournament(2)	PMX	0.7	Inversion Mutation (SIM)	0.5		15.0	0.0
+500	150	Tournament(4)	PMX	0.7	Inversion Mutation (SIM)	0.5		15.0	0.0
+500	150	Tournament(6)	PMX	0.7	Inversion Mutation (SIM)	0.5		15.0	0.0
+500	150	Tournament(12)	PMX	0.7	Inversion Mutation (SIM)	0.5		15.0	0.0
