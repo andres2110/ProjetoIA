@@ -32,17 +32,13 @@ public class CatchState extends State implements Cloneable {
                 if(matrix[i][j]==1){
                     catchLine=i;
                     catchColumn=j;
-                }else{
+                }/*else{
                     if(matrix[i][j]==2){
                         numBoxes++;
                     }
-                }
-
-
+                }*/
             }
         }
-
-
     }
 
     public void executeAction(Action action) {
@@ -71,6 +67,9 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveUp() {
+        if( matrix[catchLine-1][catchColumn]== 2){
+            numBoxes++;
+        }
     matrix[catchLine-1][catchColumn] = matrix[catchLine][catchColumn];
     matrix[catchLine][catchColumn] = 0;
     catchLine--;
@@ -78,6 +77,9 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveRight() {
+        if( matrix[catchLine][catchColumn+1]== 2){
+            numBoxes++;
+        }
         matrix[catchLine][catchColumn+1] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
         catchColumn++;
@@ -85,6 +87,9 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveDown() {
+        if( matrix[catchLine+1][catchColumn]== 2){
+            numBoxes++;
+        }
         matrix[catchLine+1][catchColumn] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
         catchLine++;
@@ -92,6 +97,9 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveLeft() {
+        if( matrix[catchLine][catchColumn-1]== 2){
+            numBoxes++;
+        }
         matrix[catchLine][catchColumn-1] = matrix[catchLine][catchColumn];
         matrix[catchLine][catchColumn] = 0;
         catchColumn--;
