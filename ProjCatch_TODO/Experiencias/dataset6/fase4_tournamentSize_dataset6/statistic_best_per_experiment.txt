@@ -1,0 +1,45 @@
+
+
+Population size:500
+Max generations:150
+Selection:Tournament(2)
+Recombination:PMX
+Recombination prob.: 0.7
+Mutation:Inversion Mutation (SIM)
+Mutation prob.: 0.5
+fitness: 159.0
+path: 13 15 19 17 9 2 11 18 20 10 7 4 1 5 3 24 23 35 14 12 6 8 16 21 32 28 31 34 33 29 27 25 22 26 30 Porta
+posicao: 4-7 5-9 7-7 6-1 3-2 0-9 3-9 6-3 8-5 3-3 2-7 1-3 0-3 1-9 0-12 9-14 9-12 14-12 4-12 3-12 1-12 2-14 5-13 8-12 13-12 11-11 13-9 14-10 14-9 11-12 11-9 10-9 9-7 11-3 13-3 14-0
+
+Population size:500
+Max generations:150
+Selection:Tournament(4)
+Recombination:PMX
+Recombination prob.: 0.7
+Mutation:Inversion Mutation (SIM)
+Mutation prob.: 0.5
+fitness: 89.0
+path: 19 22 25 27 28 31 33 34 35 32 29 21 23 24 16 14 12 8 6 3 2 5 11 15 13 7 1 4 10 9 17 18 20 26 30 Porta
+posicao: 7-7 9-7 10-9 11-9 11-11 13-9 14-9 14-10 14-12 13-12 11-12 8-12 9-12 9-14 5-13 4-12 3-12 2-14 1-12 0-12 0-9 1-9 3-9 5-9 4-7 2-7 0-3 1-3 3-3 3-2 6-1 6-3 8-5 11-3 13-3 14-0
+
+Population size:500
+Max generations:150
+Selection:Tournament(6)
+Recombination:PMX
+Recombination prob.: 0.7
+Mutation:Inversion Mutation (SIM)
+Mutation prob.: 0.5
+fitness: 91.0
+path: 20 19 22 25 27 28 31 33 34 35 32 29 23 24 21 16 14 12 8 6 3 2 5 11 15 13 7 4 1 10 9 18 17 26 30 Porta
+posicao: 8-5 7-7 9-7 10-9 11-9 11-11 13-9 14-9 14-10 14-12 13-12 11-12 9-12 9-14 8-12 5-13 4-12 3-12 2-14 1-12 0-12 0-9 1-9 3-9 5-9 4-7 2-7 1-3 0-3 3-3 3-2 6-3 6-1 11-3 13-3 14-0
+
+Population size:500
+Max generations:150
+Selection:Tournament(12)
+Recombination:PMX
+Recombination prob.: 0.7
+Mutation:Inversion Mutation (SIM)
+Mutation prob.: 0.5
+fitness: 97.0
+path: 15 11 5 7 13 19 22 20 18 17 9 10 4 1 2 3 6 8 12 14 16 24 23 21 29 35 32 28 25 27 34 33 31 30 26 Porta
+posicao: 5-9 3-9 1-9 2-7 4-7 7-7 9-7 8-5 6-3 6-1 3-2 3-3 1-3 0-3 0-9 0-12 1-12 2-14 3-12 4-12 5-13 9-14 9-12 8-12 11-12 14-12 13-12 11-11 10-9 11-9 14-10 14-9 13-9 13-3 11-3 14-0
