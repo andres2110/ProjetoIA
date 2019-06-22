@@ -1,4 +1,4 @@
 Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:
-500	150	Tournament(4)	PMX	0.7	Insert	0.3		91.0
-500	150	Tournament(4)	crossover	0.7	Insert	0.3		97.0
-500	150	Tournament(4)	One cute	0.7	Insert	0.3		99.0
+500	150	Tournament(4)	PMX	0.7	Insert	0.3		91
+500	150	Tournament(4)	crossover	0.7	Insert	0.3		97
+500	150	Tournament(4)	One cute	0.7	Insert	0.3		99

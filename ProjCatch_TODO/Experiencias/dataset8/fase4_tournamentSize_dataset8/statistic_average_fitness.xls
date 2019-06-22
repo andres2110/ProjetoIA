@@ -3,3 +3,7 @@ Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:
 500	150	Tournament(4)	PMX	0.7	Inversion Mutation (SIM)	0.5		137.13333333333333	11.783415841295295
 500	150	Tournament(6)	PMX	0.7	Inversion Mutation (SIM)	0.5		135.2	12.560254774486063
 500	150	Tournament(12)	PMX	0.7	Inversion Mutation (SIM)	0.5		142.26666666666668	13.122330416338233
+500	150	Tournament(2)	PMX	0.7	Inversion Mutation (SIM)	0.5		243.8	14.545102268461369
+500	150	Tournament(4)	PMX	0.7	Inversion Mutation (SIM)	0.5		137.13333333333333	11.783415841295295
+500	150	Tournament(6)	PMX	0.7	Inversion Mutation (SIM)	0.5		135.2	12.560254774486063
+500	150	Tournament(12)	PMX	0.7	Inversion Mutation (SIM)	0.5		142.26666666666668	13.122330416338233

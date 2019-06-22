@@ -1,10 +1,10 @@
-Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:
-500	150	Tournament(4)	PMX	0.7	Insert	0.3		91.0
-500	150	Tournament(4)	PMX	0.7	Inversion Mutation (SIM)	0.3		91.0
-500	150	Tournament(4)	PMX	0.7	 swap mutation(0.3)	0.3		103.0
-500	150	Tournament(4)	crossover	0.7	Insert	0.3		97.0
-500	150	Tournament(4)	crossover	0.7	Inversion Mutation (SIM)	0.3		97.0
-500	150	Tournament(4)	crossover	0.7	 swap mutation(0.3)	0.3		97.0
-500	150	Tournament(4)	One cute	0.7	Insert	0.3		99.0
-500	150	Tournament(4)	One cute	0.7	Inversion Mutation (SIM)	0.3		99.0
-500	150	Tournament(4)	One cute	0.7	 swap mutation(0.3)	0.3		103.0
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:	Recombination And Mutation	Fitness:
+500	150	Tournament(4)	PMX	0.7	Insert	0.3	PMX - Insert	91
+500	150	Tournament(4)	PMX	0.7	Inversion Mutation (SIM)	0.3	PMX - Inversion Mutation (SIM)	91
+500	150	Tournament(4)	PMX	0.7	 swap mutation	0.3	PMX -  swap mutation	103
+500	150	Tournament(4)	crossover	0.7	Insert	0.3	crossover - Insert	97
+500	150	Tournament(4)	crossover	0.7	Inversion Mutation (SIM)	0.3	crossover - Inversion Mutation (SIM)	97
+500	150	Tournament(4)	crossover	0.7	 swap mutation	0.3	crossover -  swap mutation	97
+500	150	Tournament(4)	One cute	0.7	Insert	0.3	One cute - Insert	99
+500	150	Tournament(4)	One cute	0.7	Inversion Mutation (SIM)	0.3	One cute - Inversion Mutation (SIM)	99
+500	150	Tournament(4)	One cute	0.7	 swap mutation	0.3	One cute -  swap mutation	103
